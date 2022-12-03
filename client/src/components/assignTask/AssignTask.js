@@ -1,6 +1,7 @@
 import React, { useState} from 'react'
 import Navbar from '../navbar/Navbar';
 import data from '../../model/api/api';
+import './assignTask.css';
 
 const AssignTask = () => {
   const [collectingVehicles, setCollecingVehicles] = useState(data.CollectingVehicleAPI.all())
@@ -60,6 +61,33 @@ const AssignTask = () => {
           }</div>
 
           <input type="submit" value="Submit"></input>
+          <div class="assign-tasks-label">
+            <label> Assign tasks</label>
+          </div>
+
+          <div class="assign-tasks">
+            <div class="assign-tasks-column">
+              <label> Username</label><br></br>
+              <input type="text" value="giahuy1234"> </input>
+            </div>
+    
+            <div class="assign-tasks-column">
+              <label> Vehicle ID</label><br></br>
+              <input type="text" value="78A1-8501"> </input>
+            </div>
+          </div>
+
+          <div class="assign-tasks-label">
+            <label> Map</label><br></br>
+          </div>
+
+          <div>
+            <img class="mapimage" src="./images/Picture1.png" width="1200px" height="300px"></img>
+          </div>
+
+          <div class="assign-tasks-submit-button">
+            <button type="button"> Submit</button>
+          </div>
 
         </form>
 
