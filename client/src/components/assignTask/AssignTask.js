@@ -82,7 +82,7 @@ const AssignTask = () => {
           </div>
 
           <div>
-            <img class="mapimage" src="./images/Picture1.png" width="1200px" height="300px"></img>
+            <img class="mapimage" src="https://allaboutcats.com/wp-content/uploads/2022/01/Calico-Cats.jpg" width="1200px" height="300px" alt="cat map"></img>
           </div>
 
           <div class="assign-tasks-submit-button">
