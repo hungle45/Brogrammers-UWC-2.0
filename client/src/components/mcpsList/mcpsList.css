@@ -1,0 +1,27 @@
+.mcp-button {
+    display: flex;
+}
+
+.mcp-button-container {
+    width: 33%;
+}
+
+.controller-container {
+    display: flex;
+    padding: 10px;
+}
+
+.controller-container-column {
+    width: 50%;
+    margin: 10px;
+    padding: 10px;
+    border: 2px black;
+    border-style: solid;
+    display: flex;
+}
+
+.controller-container-small-column {
+    width: 50%;
+    margin: 10px;
+    padding: 10px;
+}

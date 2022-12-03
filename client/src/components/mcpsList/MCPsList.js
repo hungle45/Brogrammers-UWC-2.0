@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from '../navbar/Navbar';
 import api from '../../model/api/api';
+import './mcpsList.css'
 import { CaretDownFill, CaretUpFill, FunnelFill } from "react-bootstrap-icons";
 
 
@@ -71,6 +72,78 @@ const MCPsList = () => {
               <div>Last collected: {value.lastCollected}</div>
             </div>)
           })}</div>
+
+        <div class="mcp-button" style="margin: 10px;">
+            <div class="mcp-button-container">
+                <label> Sort by capacity</label>
+                <button> Capacity</button>
+            </div>
+            <div class="mcp-button-container">
+                <label> Sort by last collected</label>
+                <button> Last collected</button>
+            </div>
+            <div class="mcp-button-container">
+                <label> Filter by capacity</label>
+                <button> Capacity</button>
+            </div>
+        </div>
+
+        <div class="controller-container">
+            <div class="controller-container-column">
+                <div class="controller-container-small-column">
+                    <img src="./images/mcp-controller.png"></img>
+                </div>
+                <div class="controller-container-small-column">
+                    <img src="./images/mcp-controller.png" width="10px" height="10px"></img>
+                    <label> Zone A</label><br></br>
+                    <img src="./images/mcp-controller.png" width="10px" height="10px"></img>
+                    <label> Capacity</label><br></br>
+                    <img src="./images/mcp-controller.png" width="10px" height="10px"></img>
+                    <label> Last collected</label><br></br>
+                </div>
+            </div>
+            <div class="controller-container-column">
+                <div class="controller-container-small-column">
+                    <img src="./images/mcp-controller.png"></img>
+                </div>
+                <div class="controller-container-small-column">
+                    <img src="./images/mcp-controller.png" width="10px" height="10px"></img>
+                    <label> Zone A</label><br></br>
+                    <img src="./images/mcp-controller.png" width="10px" height="10px"></img>
+                    <label> Capacity</label><br></br>
+                    <img src="./images/mcp-controller.png" width="10px" height="10px"></img>
+                    <label> Last collected</label><br></br>
+                </div>
+            </div>
+        </div>
+        <div class="controller-container">
+            <div class="controller-container-column">
+                <div class="controller-container-small-column">
+                    <img src="./images/mcp-controller.png"></img>
+                </div>
+                <div class="controller-container-small-column">
+                    <img src="./images/mcp-controller.png" width="10px" height="10px"></img>
+                    <label> Zone A</label><br></br>
+                    <img src="./images/mcp-controller.png" width="10px" height="10px"></img>
+                    <label> Capacity</label><br></br>
+                    <img src="./images/mcp-controller.png" width="10px" height="10px"></img>
+                    <label> Last collected</label><br></br>
+                </div>
+            </div>
+            <div class="controller-container-column">
+                <div class="controller-container-small-column">
+                    <img src="./images/mcp-controller.png"></img>
+                </div>
+                <div class="controller-container-small-column">
+                    <img src="./images/mcp-controller.png" width="10px" height="10px"></img>
+                    <label> Zone A</label><br></br>
+                    <img src="./images/mcp-controller.png" width="10px" height="10px"></img>
+                    <label> Capacity</label><br></br>
+                    <img src="./images/mcp-controller.png" width="10px" height="10px"></img>
+                    <label> Last collected</label><br></br>
+                </div>
+            </div>
+        </div>
       </>
     </>
 

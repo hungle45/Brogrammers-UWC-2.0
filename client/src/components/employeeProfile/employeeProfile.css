@@ -1,0 +1,45 @@
+.info-row {
+    display: flex;
+    padding: 20px;
+}
+
+.left {
+    flex: 30%;
+    text-align: center;
+}
+
+.right {
+    flex: 70%;
+}
+
+.input-line-1 {
+    padding: 10px;
+    display: inline-block;
+}
+
+.input-line-2 {
+    padding: 10px;
+    display: inline-block;
+    width: 300px;
+}
+
+.input-button-label {
+    padding: 10px;
+    left: 200px;
+    background-color: gray;
+}
+
+.input-button {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+}
+
+.info-submit-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
