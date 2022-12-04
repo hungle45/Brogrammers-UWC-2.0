@@ -21,6 +21,52 @@ const TrollersList = () => {
               <div>{!value.status ? "Available" : "Unavailable"}</div>
             </div>)
           })}</div>
+        
+        <div style="margin: 10px;">
+            <button> MCP controllers</button>
+            <button> Collecting vehicles</button>
+        </div>
+
+        <div class="controller-container">
+            <div class="controller-container-column">
+                <div class="controller-container-small-column">
+                    <img src="./images/mcp-controller.png"></img>
+                </div>
+                <div class="controller-container-small-column">
+                    <label> 78A1-8501</label><br></br>
+                    <label> Available</label>
+                </div>
+            </div>
+            <div class="controller-container-column">
+                <div class="controller-container-small-column">
+                    <img src="./images/mcp-controller.png"></img>
+                </div>
+                <div class="controller-container-small-column">
+                    <label> 78A1-8501</label><br></br>
+                    <label> Available</label>
+                </div>
+            </div>
+        </div>
+        <div class="controller-container">
+            <div class="controller-container-column">
+                <div class="controller-container-small-column">
+                    <img src="./images/mcp-controller.png"></img>
+                </div>
+                <div class="controller-container-small-column">
+                    <label> 78A1-8501</label><br></br>
+                    <label> Available</label>
+                </div>
+            </div>
+            <div class="controller-container-column">
+                <div class="controller-container-small-column">
+                    <img src="./images/mcp-controller.png"></img>
+                </div>
+                <div class="controller-container-small-column">
+                    <label> 78A1-8501</label><br></br>
+                    <label> Available</label>
+                </div>
+            </div>
+        </div>
       </>
     </>
 
