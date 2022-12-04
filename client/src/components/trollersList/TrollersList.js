@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Navbar from '../navbar/Navbar'
 import api from '../../model/api/api';
 import { NavLink } from "react-router-dom";
+import './trollersList.css'
 
 const TrollersList = () => {
   const [trollers, setTrollers] = useState(api.TrollerAPI.all());
@@ -22,7 +23,7 @@ const TrollersList = () => {
             </div>)
           })}</div>
         
-        <div style="margin: 10px;">
+        <div style={{margin: '10px',}}>
             <button> MCP controllers</button>
             <button> Collecting vehicles</button>
         </div>
@@ -30,7 +31,7 @@ const TrollersList = () => {
         <div class="controller-container">
             <div class="controller-container-column">
                 <div class="controller-container-small-column">
-                    <img src="./images/mcp-controller.png"></img>
+                    <img src="./images/mcp-controller.png" alt='sth'></img>
                 </div>
                 <div class="controller-container-small-column">
                     <label> 78A1-8501</label><br></br>
@@ -39,7 +40,7 @@ const TrollersList = () => {
             </div>
             <div class="controller-container-column">
                 <div class="controller-container-small-column">
-                    <img src="./images/mcp-controller.png"></img>
+                    <img src="./images/mcp-controller.png" alt='sth'></img>
                 </div>
                 <div class="controller-container-small-column">
                     <label> 78A1-8501</label><br></br>
@@ -50,7 +51,7 @@ const TrollersList = () => {
         <div class="controller-container">
             <div class="controller-container-column">
                 <div class="controller-container-small-column">
-                    <img src="./images/mcp-controller.png"></img>
+                    <img src="./images/mcp-controller.png" alt='sth'></img>
                 </div>
                 <div class="controller-container-small-column">
                     <label> 78A1-8501</label><br></br>
@@ -59,7 +60,7 @@ const TrollersList = () => {
             </div>
             <div class="controller-container-column">
                 <div class="controller-container-small-column">
-                    <img src="./images/mcp-controller.png"></img>
+                    <img src="./images/mcp-controller.png" alt='sth'></img>
                 </div>
                 <div class="controller-container-small-column">
                     <label> 78A1-8501</label><br></br>

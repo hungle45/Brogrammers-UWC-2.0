@@ -37,8 +37,8 @@ const MCPsList = () => {
     <>
       <Navbar />
       <>
-        <div>
-          <div>
+        <div class="mcp-button" style={{margin: '10px',}}>
+          <div class="mcp-button-container">
             %Capacity
             <span onClick={() => HandleOnSort('percentage', false)}>
               <CaretUpFill />
@@ -47,7 +47,7 @@ const MCPsList = () => {
               <CaretDownFill />
             </span>
           </div>
-          <div>
+          <div class="mcp-button-container">
             last collected
             <span onClick={() => HandleOnSort('lastCollected', false)}>
               <CaretUpFill />
@@ -56,97 +56,32 @@ const MCPsList = () => {
               <CaretDownFill />
             </span>
           </div>
-          <div>
+          <div class="mcp-button-container">
             Capacity
             <span onClick={() => HandleOnFilterFull()}>
               <FunnelFill />
             </span>
           </div>
         </div>
-        <div>{!MCPs.length ? <></> :
+
+        <div class="controller-container">
+          {!MCPs.length ? <></> :
           MCPs.map((value, index) => {
-            return (<div key={value.id}>
-              <img src="" alt="MCP img"></img>
-              <div>{value.name}</div>
-              <div>% Capacity: {value.percentage}</div>
-              <div>Last collected: {value.lastCollected}</div>
+            return (<div key={value.id} class="controller-container-column">
+              <div class="controller-container-small-column">
+               <img src="" alt="MCP img"></img>
+              </div>
+              
+              <div class="controller-container-small-column"> 
+                <div>{value.name}</div>
+                <div>% Capacity: {value.percentage}</div>
+                <div>Last collected: {value.lastCollected}</div>
+              </div>
             </div>)
-          })}</div>
-
-        <div class="mcp-button" style="margin: 10px;">
-            <div class="mcp-button-container">
-                <label> Sort by capacity</label>
-                <button> Capacity</button>
-            </div>
-            <div class="mcp-button-container">
-                <label> Sort by last collected</label>
-                <button> Last collected</button>
-            </div>
-            <div class="mcp-button-container">
-                <label> Filter by capacity</label>
-                <button> Capacity</button>
-            </div>
-        </div>
-
-        <div class="controller-container">
-            <div class="controller-container-column">
-                <div class="controller-container-small-column">
-                    <img src="./images/mcp-controller.png"></img>
-                </div>
-                <div class="controller-container-small-column">
-                    <img src="./images/mcp-controller.png" width="10px" height="10px"></img>
-                    <label> Zone A</label><br></br>
-                    <img src="./images/mcp-controller.png" width="10px" height="10px"></img>
-                    <label> Capacity</label><br></br>
-                    <img src="./images/mcp-controller.png" width="10px" height="10px"></img>
-                    <label> Last collected</label><br></br>
-                </div>
-            </div>
-            <div class="controller-container-column">
-                <div class="controller-container-small-column">
-                    <img src="./images/mcp-controller.png"></img>
-                </div>
-                <div class="controller-container-small-column">
-                    <img src="./images/mcp-controller.png" width="10px" height="10px"></img>
-                    <label> Zone A</label><br></br>
-                    <img src="./images/mcp-controller.png" width="10px" height="10px"></img>
-                    <label> Capacity</label><br></br>
-                    <img src="./images/mcp-controller.png" width="10px" height="10px"></img>
-                    <label> Last collected</label><br></br>
-                </div>
-            </div>
-        </div>
-        <div class="controller-container">
-            <div class="controller-container-column">
-                <div class="controller-container-small-column">
-                    <img src="./images/mcp-controller.png"></img>
-                </div>
-                <div class="controller-container-small-column">
-                    <img src="./images/mcp-controller.png" width="10px" height="10px"></img>
-                    <label> Zone A</label><br></br>
-                    <img src="./images/mcp-controller.png" width="10px" height="10px"></img>
-                    <label> Capacity</label><br></br>
-                    <img src="./images/mcp-controller.png" width="10px" height="10px"></img>
-                    <label> Last collected</label><br></br>
-                </div>
-            </div>
-            <div class="controller-container-column">
-                <div class="controller-container-small-column">
-                    <img src="./images/mcp-controller.png"></img>
-                </div>
-                <div class="controller-container-small-column">
-                    <img src="./images/mcp-controller.png" width="10px" height="10px"></img>
-                    <label> Zone A</label><br></br>
-                    <img src="./images/mcp-controller.png" width="10px" height="10px"></img>
-                    <label> Capacity</label><br></br>
-                    <img src="./images/mcp-controller.png" width="10px" height="10px"></img>
-                    <label> Last collected</label><br></br>
-                </div>
-            </div>
+          })}
         </div>
       </>
     </>
-
   )
 }
 

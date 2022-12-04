@@ -7,12 +7,12 @@
 }
 
 .controller-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     padding: 10px;
 }
 
 .controller-container-column {
-    width: 50%;
     margin: 10px;
     padding: 10px;
     border: 2px black;
