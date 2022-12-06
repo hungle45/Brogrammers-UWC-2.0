@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import GlobalContext from "./context/GlobalContext"
-import {useContext} from "react";
+import { useContext } from "react";
 import ProtectedRoutes from "./components/ProtectedRoutes";
 import Home from "./components/home/Home";
 import Profile from "./components/profile/Profile";
@@ -13,12 +13,11 @@ import TrollersList from "./components/trollersList/TrollersList";
 import MCPsList from "./components/mcpsList/MCPsList";
 import Login from "./components/login/Login";
 import ForgotPassword from "./components/forgotPassword/ForgotPassword";
-import ResetPassword from "./components/resetPassword/ResetPassword";
 import ErrorPage from "./components/errorPage/ErrorPage";
+import Conversation from "./components/conversation/Conversation";
 
 function App() {
-  const  { user } = useContext(GlobalContext);
-  
+  const { user } = useContext(GlobalContext);
   return (
     <Router>
       <Routes>
@@ -28,14 +27,14 @@ function App() {
           <Route path="/emp-list" element={<EmployeesList />} />
           <Route path="/emp-info/:id" element={<EmployeeProfile />} />
           <Route path="/assign" element={<AssignTask />} />
-          <Route path="/chat/:id" element={<Chat />} />
-          <Route path="/vehicles/trucks" element={<TrucksList />} />
+          <Route path="/chat" element={<Chat />} />
+          <Route path="/conversation/:id" element={<Conversation />} />
           <Route path="/vehicles/trollers" element={<TrollersList />} />
+          <Route path="/vehicles/trucks" element={<TrucksList />} />
           <Route path="/mcps" element={<MCPsList />} />
         </Route>
         <Route path="/login" element={user ? <Navigate to="/" /> : <Login />} />
         <Route path="/forgot" element={user ? <Navigate to="/" /> : <ForgotPassword />} />
-        <Route path="/reset" element={user ? <Navigate to="/" /> : <ResetPassword />} />
         <Route path="/*" element={<ErrorPage />} />
       </Routes>
     </Router>

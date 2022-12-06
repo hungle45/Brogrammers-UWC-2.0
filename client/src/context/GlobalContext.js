@@ -1,12 +1,16 @@
-import { createContext, useState, useEffect } from "react";
+import { createContext, useState } from "react";
+import { getConversationsList, getLastConversationMessage, getLoggedInUser, getPersonById, formatDateToInput, getConversationById } from "../controller/controller";
 
 const GlobalContext = createContext();
 
 export const GlobalContextProvider = ({ children }) => {
 
-  const user = {};      // dummy user object (if logged in), change it to false to see protectedRoutes being protected
+  const loggedInUser = getLoggedInUser();
+  const [user, setUser] = useState(loggedInUser);
 
-  return <GlobalContext.Provider value={{user}}>
+  const conversationsList = getConversationsList(user?.id);
+  
+  return <GlobalContext.Provider value={{ formatDateToInput, user, setUser, conversationsList, getLastConversationMessage, getPersonById, getConversationById }}>
     {children}
   </GlobalContext.Provider>;
 };
