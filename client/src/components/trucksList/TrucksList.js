@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Navbar from '../navbar/Navbar'
 import api from '../../model/api/api';
+import './trucksList.css'
 import { NavLink } from "react-router-dom";
 import { CaretDownFill, CaretUpFill } from "react-bootstrap-icons";
 
@@ -36,18 +37,28 @@ const TrucksList = () => {
     <>
       <Navbar />
       <>
-        <div>
-          <NavLink to='/vehicles/trollers'>Trollers</NavLink>
-          <NavLink to='/vehicles/trucks'>Trucks</NavLink>
+      <div className='title border-bottom-gray'>
+          <div className='left-div'>
+            <h1>Trucks</h1>
+          </div>
+          <div className='right-div'>
+            <div className='navlink-truck-container-left'>
+              <NavLink to='/vehicles/trollers' className='navlink-truck navlink-truck-left'>Trollers</NavLink>
+            </div>
+            <div className='navlink-truck-container-right'>
+              <NavLink to='/vehicles/trucks' className='navlink-truck navlink-truck-right'>Trucks</NavLink>
+            </div>
+
+          </div>
         </div>
-        <div>
-          <table>
+        <div className='table'>
+          <table id='truck-table'>
             <tbody>
               <tr>
-                <th>Truck ID</th>
-                <th>Used by</th>
-                <th>Location</th>
-                <th>Status
+                <th className='table-header'>Truck ID</th>
+                <th className='table-header'>Used by</th>
+                <th className='table-header'>Location</th>
+                <th className='table-header'>Status
                   <span onClick={() => HandleOnSort("status", 0)}>
                     {reverse[0] ? <CaretDownFill />
                       : <CaretUpFill />}
@@ -57,16 +68,15 @@ const TrucksList = () => {
               {trucks.map((value, index) => {
                 return (
                   <tr>
-                    <td>{value.id}</td>
-                    <td>{value.userName}</td>
-                    <td>{value.location}</td>
-                    <td>{!value.status ? "Available" : "In use"}</td>
+                    <td className='table-item'>{value.id}</td>
+                    <td className='table-item'>{value.userName}</td>
+                    <td className='table-item'>{value.location}</td>
+                    <td className='table-item'>{!value.status ? <div className='status-available'>&bull; Available</div> : <div className='status-in-use'>&bull; In use</div>}</td>
                   </tr>
                 )
               })}
             </tbody>
-          </table>
-        </div>
+          </table></div>
       </>
     </>
 

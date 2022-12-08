@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from '../navbar/Navbar';
 import api, { mcpAPI } from '../../model/api/api';
+import './mcpsList.css'
 import { CaretDownFill, CaretUpFill } from "react-bootstrap-icons";
 
 
@@ -42,33 +43,36 @@ const MCPsList = () => {
     <>
       <Navbar />
       <>
-        <div>
-          <table>
+        <div className='title border-bottom-gray'>
+          <h1>MCPs list</h1>
+        </div>
+        <div className='table'>
+          <table id='mcp-table'>
             <tbody>
               <tr>
-                <th>MCP ID</th>
-                <th>MCP name</th>
-                <th>Capacity
+                <th className='table-header'>MCP ID</th>
+                <th className='table-header'>MCP name</th>
+                <th className='table-header'>Capacity
                   <span onClick={() => HandleOnSort("percentage", 0)}>
                     {reverse[0] ? <CaretDownFill />
                       : <CaretUpFill />}
                   </span>
                 </th>
-                <th>Last visited</th>
+                <th className='table-header'>Last visited</th>
               </tr>
               {MCPs.map((value, index) => {
                 return (
                   <tr>
-                    <td>{value.id}</td>
-                    <td>{value.name}</td>
+                    <td className='table-item'>{value.id}</td>
+                    <td className='table-item'>{value.name}</td>
                     {value.percentage <= 40 ?
-                      <td>{value.percentage}</td> :
+                      <td className='table-item first-level'>{value.percentage}%</td> :
                       value.percentage <= 60 ?
-                        <td>{value.percentage}</td> :
+                        <td className='table-item second-level'>{value.percentage}%</td> :
                         value.percentage <= 80 ?
-                          <td>{value.percentage}</td> :
-                          <td>{value.percentage}</td>}
-                    <td>{value.lastCollected}</td>
+                          <td className='table-item third-level'>{value.percentage}%</td> :
+                          <td className='table-item fourth-level'>{value.percentage}%</td>}
+                    <td className='table-item'>{value.lastCollected}</td>
                   </tr>
                 )
               })}
