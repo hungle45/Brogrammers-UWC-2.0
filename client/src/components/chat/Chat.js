@@ -12,7 +12,7 @@ const Chat = () => {
   return (
     <main>
       <Navbar />
-      <div className="center">
+      <div className="center" style={{marginTop: "20px"}}>
         {conversationsList.map((conversation) => {
           const person = getPersonById(
             conversation.users.filter((userId) => userId !== user.id)[0]
@@ -24,7 +24,7 @@ const Chat = () => {
                   getLastConversationMessage(conversation.id).content
                 }`;
           return (
-            <Link to={`/conversation/${conversation.id}`} className = 'left'>
+            <Link to={`/conversation/${conversation.id}`} className = 'left link-container'>
               <div className="conversation-container">
                 <div className = "conversation-container-image">
                   <img className = "rounded-image-medium" src={person.avatar} alt="Person's avatar" />
