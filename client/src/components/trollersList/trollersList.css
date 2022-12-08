@@ -15,26 +15,26 @@
 .right-div {
     width: 25%;
 }
-.navlink:link {
+.navlink-troller:link {
     text-decoration: none;
 }
-.navlink-left:link {
+.navlink-troller-left:link {
     color: #1FA750;
 }
-.navlink-right:link {
+.navlink-troller-right:link {
     color: #000000;
 }
 
-.navlink:visited {
+.navlink-troller:visited {
     text-decoration: none;
 }
-.navlink-left:visited {
+.navlink-troller-left:visited {
     color: #1FA750;
 }
-.navlink-right:visited {
+.navlink-troller-right:visited {
     color: #000000;
 }
-.navlink-container-left {
+.navlink-troller-container-left {
     margin: 10px 0px;
     border: 10px;
     border-style: solid;
@@ -46,7 +46,7 @@
     background-color: #CFF6DD;
     color: #1FA750;
 }
-.navlink-container-right {
+.navlink-troller-container-right {
     margin: 10px 0px;
     border: 10px;
     border-style: solid;
