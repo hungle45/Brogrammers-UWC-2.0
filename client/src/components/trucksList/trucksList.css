@@ -18,22 +18,23 @@
 .navlink:link {
     text-decoration: none;
 }
+.navlink-left:link {
+    color: #1FA750;
+}
+.navlink-right:link {
+    color: #000000;
+}
+
 .navlink:visited {
     text-decoration: none;
 }
-.navlink-left {
-    margin: 10px 0px;
-    border: 10px;
-    border-style: solid;
-    border-color: #C5C5C5;
-    border-width: 2px;
-    border-radius: 5px;
-    padding: 10px 40px;
-    float: left;
-    background-color: #C5C5C5;
+.navlink-left:visited {
+    color: #1FA750;
+}
+.navlink-right:visited {
     color: #000000;
 }
-.navlink-right {
+.navlink-container-left {
     margin: 10px 0px;
     border: 10px;
     border-style: solid;
@@ -45,7 +46,18 @@
     background-color: #CFF6DD;
     color: #1FA750;
 }
-
+.navlink-container-right {
+    margin: 10px 0px;
+    border: 10px;
+    border-style: solid;
+    border-color: #C5C5C5;
+    border-width: 2px;
+    border-radius: 5px;
+    padding: 10px 40px;
+    float: left;
+    background-color: #C5C5C5;
+    color: #000000;
+}
 .table {
     table-layout: auto;
     margin: 0px 40px;

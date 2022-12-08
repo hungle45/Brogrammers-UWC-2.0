@@ -42,11 +42,11 @@ const TrucksList = () => {
             <h1>Trucks</h1>
           </div>
           <div className='right-div'>
-            <div className='navlink-left'>
-              <NavLink to='/vehicles/trollers' className='navlink'>Trollers</NavLink>
+            <div className='navlink-container-left'>
+              <NavLink to='/vehicles/trollers' className='navlink navlink-left'>Trollers</NavLink>
             </div>
-            <div className='navlink-right'>
-              <NavLink to='/vehicles/trucks' className='navlink'>Trucks</NavLink>
+            <div className='navlink-container-right'>
+              <NavLink to='/vehicles/trucks' className='navlink navlink-right'>Trucks</NavLink>
             </div>
 
           </div>

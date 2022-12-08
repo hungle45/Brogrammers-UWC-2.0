@@ -18,10 +18,23 @@
 .navlink:link {
     text-decoration: none;
 }
+.navlink-left:link {
+    color: #1FA750;
+}
+.navlink-right:link {
+    color: #000000;
+}
+
 .navlink:visited {
     text-decoration: none;
 }
-.navlink-left {
+.navlink-left:visited {
+    color: #1FA750;
+}
+.navlink-right:visited {
+    color: #000000;
+}
+.navlink-container-left {
     margin: 10px 0px;
     border: 10px;
     border-style: solid;
@@ -33,7 +46,7 @@
     background-color: #CFF6DD;
     color: #1FA750;
 }
-.navlink-right {
+.navlink-container-right {
     margin: 10px 0px;
     border: 10px;
     border-style: solid;
