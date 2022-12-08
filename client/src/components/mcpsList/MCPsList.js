@@ -75,6 +75,23 @@ const MCPsList = () => {
             </tbody>
           </table>
         </div>
+        <div className='table'>
+          <table id='troller-table'>
+            <tbody>
+              <tr>
+                <th className='table-header'>Truck ID</th>
+                <th className='table-header'>Used by</th>
+                <th className='table-header'>Location</th>
+                <th className='table-header'>Status
+                  <span onClick={() => HandleOnSort("status", 0)}>
+                    {reverse[0] ? <CaretDownFill />
+                      : <CaretUpFill />}
+                  </span>
+                </th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </>
     </>
 

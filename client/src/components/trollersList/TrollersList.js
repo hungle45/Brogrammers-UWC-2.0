@@ -44,18 +44,23 @@ const TrollersList = () => {
             <h1>Trollers</h1>
           </div>
           <div className='right-div'>
-            <NavLink to='/vehicles/trollers' className='navlink'>Trollers</NavLink>
-            <NavLink to='/vehicles/trucks' className='navlink'>Trucks</NavLink>
+            <div className='navlink-left'>
+              <NavLink to='/vehicles/trollers' className='navlink'>Trollers</NavLink>
+            </div>
+            <div className='navlink-right'>
+              <NavLink to='/vehicles/trucks' className='navlink'>Trucks</NavLink>
+            </div>
+
           </div>
         </div>
         <div className='table'>
           <table id='troller-table'>
             <tbody>
               <tr>
-                <th className='table-item'>Truck ID</th>
-                <th className='table-item'>Used by</th>
-                <th className='table-item'>Location</th>
-                <th className='table-item'>Status
+                <th className='table-header'>Truck ID</th>
+                <th className='table-header'>Used by</th>
+                <th className='table-header'>Location</th>
+                <th className='table-header'>Status
                   <span onClick={() => HandleOnSort("status", 0)}>
                     {reverse[0] ? <CaretDownFill />
                       : <CaretUpFill />}
@@ -68,12 +73,13 @@ const TrollersList = () => {
                     <td className='table-item'>{value.id}</td>
                     <td className='table-item'>{value.userName}</td>
                     <td className='table-item'>{value.location}</td>
-                    <td className='table-item'>{!value.status ? "Available" : "In use"}</td>
+                    <td className='table-item'>{!value.status ? <div className='status-available'>&bull; Available</div> : <div className='status-in-use'>&bull; In use</div>}</td>
                   </tr>
                 )
               })}
             </tbody>
-          </table></div>
+          </table>
+        </div>
       </>
     </>
 
