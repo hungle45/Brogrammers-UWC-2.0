@@ -15,7 +15,12 @@
 .right-div {
     width: 25%;
 }
-
+.navlink:link {
+    text-decoration: none;
+}
+.navlink:visited {
+    text-decoration: none;
+}
 .navlink-left {
     margin: 10px 0px;
     border: 10px;
@@ -26,7 +31,7 @@
     padding: 10px 40px;
     float: left;
     background-color: #CFF6DD;
-    text-decoration-color: #1FA750;
+    color: #1FA750;
 }
 .navlink-right {
     margin: 10px 0px;
@@ -38,10 +43,7 @@
     padding: 10px 40px;
     float: left;
     background-color: #C5C5C5;
-    text-decoration-color: #000000;
-}
-.navlink:link {
-    text-decoration: none;
+    color: #000000;
 }
 
 .table {
@@ -54,27 +56,27 @@
 .table-header {
     padding: 10px;
     text-align: center;
-    font-weight: normal;
+    font-weight: bold;
 }
 
 .table-item {
     padding: 10px;
     text-align: center;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .status-available {
     display: inline-block;
     padding: 3px 10px;
-    border-radius: 5px;
+    border-radius: 15px;
     background-color: #CFF6DD;
-    text-decoration-color: #1FA750;
+    color: #1FA750;
 }
 
 .status-in-use {
     display: inline-block;
     padding: 3px 10px;
-    border-radius: 5px;
+    border-radius: 15px;
     background-color: #FDF5DD;
-    text-decoration-color: #CFA00C;
+    color: #CFA00C;
 }

@@ -2,7 +2,7 @@ import Navbar from "../navbar/Navbar";
 import React, { useContext } from "react";
 import GlobalContext from "../../context/GlobalContext";
 import { Link } from "react-router-dom";
-import momemt from "moment";
+import moment from "moment";
 import './chat.css'
 
 const Chat = () => {
@@ -33,7 +33,7 @@ const Chat = () => {
                 <h3>{`${person.firstName} ${person.lastName}`}</h3>
                   <p className="text-black">{lastMessageContent}</p>
                   <p className="text-black">
-                    {momemt(formatDateTimeToISO(getLastConversationMessage(conversation.id).timestamp)).fromNow()}
+                    {moment(formatDateTimeToISO(getLastConversationMessage(conversation.id).timestamp)).fromNow()}
                   </p>
                 </div>
                 <div className="three-point-container"><i className="fa-solid fa-ellipsis-vertical three-point"></i></div>

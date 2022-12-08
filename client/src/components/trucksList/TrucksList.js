@@ -39,7 +39,7 @@ const TrucksList = () => {
       <>
       <div className='title border-bottom-gray'>
           <div className='left-div'>
-            <h1>Trollers</h1>
+            <h1>Trucks</h1>
           </div>
           <div className='right-div'>
             <div className='navlink-left'>

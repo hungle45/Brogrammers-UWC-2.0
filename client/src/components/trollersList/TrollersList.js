@@ -57,7 +57,7 @@ const TrollersList = () => {
           <table id='troller-table'>
             <tbody>
               <tr>
-                <th className='table-header'>Truck ID</th>
+                <th className='table-header'>Troller ID</th>
                 <th className='table-header'>Used by</th>
                 <th className='table-header'>Location</th>
                 <th className='table-header'>Status
