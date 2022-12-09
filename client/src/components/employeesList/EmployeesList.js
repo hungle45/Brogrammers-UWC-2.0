@@ -49,38 +49,37 @@ const EmployeesList = () => {
 
 
   return (
-    <span>
+    <>
       <Navbar />
       <>
         <div className='title border-bottom-gray'><h1>Employees</h1></div>
-        <div className='table'>
-          <table id = 'employee-table'>
+        
+        
+          <table id = 'employee-table' className='table'>
             <tbody>
               <tr>
-                <th className='table-item'></th>
-                <th className='table-item'>
+                <th className='table-item' style={{width: "10%"}}></th>
+                <th className='table-item' style={{width: "20%"}}>
                   UserName
-                  <span onClick={() => HandleOnSort("username", 0)}>
-                    {reverse[0] ? <CaretDownFill />
-                      : <CaretUpFill />}
+                  <span onClick={() => HandleOnSort("username", 0)} className="filter-button">
+                    {reverse[0] ? 
+                      <i class="fa-solid fa-chevron-up"/> : <i class="fa-solid fa-chevron-down"/>}
                   </span>
                 </th>
-                <th className='table-item'>Dept</th>
-                <th className='table-item'>
+                <th className='table-item' style={{width: "10%"}}>Dept</th>
+                <th className='table-item' style={{width: "10%"}}>
                   Status
-                  <span onClick={() => HandleOnSort("status", 1)}>
-                    {reverse[1] ? <CaretDownFill />
-                      : <CaretUpFill />}
+                  <span onClick={() => HandleOnSort("status", 1)} className="filter-button">
+                    {reverse[1] ? <i class="fa-solid fa-chevron-up"/> : <i class="fa-solid fa-chevron-down"/>}
                   </span>
                 </th>
-                <th className='table-item'>
+                <th className='table-item' style={{width: "10%"}}>
                   Number of tasks
-                  <span onClick={() => HandleOnSort("numberOfTasks", 2)}>
-                    {reverse[2] ? <CaretDownFill />
-                      : <CaretUpFill />}
+                  <span onClick={() => HandleOnSort("numberOfTasks", 2)} className="filter-button">
+                    {reverse[2] ? <i class="fa-solid fa-chevron-up"/> : <i class="fa-solid fa-chevron-down"/>}
                   </span>
                 </th>
-                <th></th>
+                <th className='table-item' style={{width: "10%"}}></th>
               </tr>
               {!employees.length ? <></> :
                 employees.map((value, index) => {
@@ -90,11 +89,11 @@ const EmployeesList = () => {
                     <td className='table-item'>{value.username}
                     </td>
                     <td className='table-item'>{value.position ? "Collector" : "Janitor"}</td>
-                    <td className={!value.status ? 'table-item fw-bold text-green' : 'table-item fw-bold text-red'}>{!value.status ? 
+                    <td className={!value.status ? 'table-item text-green' : 'table-item text-red'}>{!value.status ? 
             (<div className='available-container'><span className='dot'></span>Available</div>) : 
             (<div className='unavailable-container'><span className='dot-2'></span>Unavailable</div>)}</td>
                     <td className='table-item'>{value.numberOfTasks}</td>
-                    <td className='table-item'>
+                    <td className='table-item' style={{cursor: "pointer"}}>
                       {(showMenu && employeeId === value.id) ? (<div>
                         <div onClick={() => HandleOnHide()}>...</div>
                         <br/>
@@ -108,9 +107,9 @@ const EmployeesList = () => {
                 })}
             </tbody>
           </table>
-        </div>
+        
       </>
-    </span>
+    </>
 
   )
 }
