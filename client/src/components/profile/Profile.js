@@ -3,6 +3,7 @@ import GlobalContext from '../../context/GlobalContext'
 import ChangePassword from '../changePassword/ChangePassword';
 import {useNavigate} from "react-router-dom";
 import Navbar from "../navbar/Navbar";
+import './profile.css';
 
 const Profile = () => {
 
@@ -28,32 +29,42 @@ const Profile = () => {
     <Navbar />
     <main className="container">
       <div className="image-name-container">
-        <img src={user.avatar} alt="Back officer avatar" />
-        <h3>{`${user.firstName} ${user.lastName}`}</h3>
+        <img className='image-container'src={user.avatar} alt="Back officer avatar" />
+        <div>
+          <h3>{`${user.firstName} ${user.lastName}`}</h3>
+        </div>
       </div>
-      <form onSubmit={(e) => handleSubmit(e)} className="form-container" >
-        <label htmlFor="firstNameInput">First name</label>
-        <input type="text" id="firstNameInput" required value={fname} onChange={(e) => setFname(e.target.value)} />
+      <form onSubmit={(e) => handleSubmit(e)} className="form-container">
+        <div className='form-grid-container'>
 
-        <label htmlFor="lastNameInput">Last name</label>
-        <input type="text" id="lastNameInput" required value={lname} onChange={(e) => setLname(e.target.value)} />
+          <label className='form-grid-item' htmlFor="firstNameInput">First name</label>
+          <input className='form-grid-item' type="text" id="firstNameInput" required value={fname} onChange={(e) => setFname(e.target.value)} />
 
-        <label htmlFor="emailInput">Email</label>
-        <input type="email" id="emailInput" required value={email} onChange={(e) => setEmail(e.target.value)} />
+          <label className='form-grid-item' htmlFor="lastNameInput">Last name</label>
+          <input className='form-grid-item' type="text" id="lastNameInput" required value={lname} onChange={(e) => setLname(e.target.value)} />
 
-        <label htmlFor="bdateInput">Birth date</label>
-        <input type="date" id="bdateInput" required value={bdate} onChange={(e) => setBdate(e.target.value)} />
+          <label className='form-grid-item' htmlFor="emailInput">Email</label>
+          <input className='form-grid-item' type="email" id="emailInput" required value={email} onChange={(e) => setEmail(e.target.value)} />
 
-        <label htmlFor="idInput">ID</label>
-        <input type="text" id="idInput" required disabled value={id} />
+          <label className='form-grid-item' htmlFor="bdateInput">Birth date</label>
+          <input className='form-grid-item' type="date" id="bdateInput" required value={bdate} onChange={(e) => setBdate(e.target.value)} />
 
-        <label htmlFor="usernameInput">Username</label>
-        <input type="text" id="usernameInput" required value={username} onChange={(e) => setUsername(e.target.value)} />
+          <label className='form-grid-item' htmlFor="idInput">ID</label>
+          <input className='form-grid-item' type="text" id="idInput" required disabled value={id} />
 
-        <label htmlFor="memberSinceInput">Member since</label>
-        <input type="date" id="memberSinceInput" required disabled value={memberSince} />
-        <button type="submit">Save changes</button>
+          <label className='form-grid-item' htmlFor="usernameInput">Username</label>
+          <input className='form-grid-item' type="text" id="usernameInput" required value={username} onChange={(e) => setUsername(e.target.value)} />
 
+          <label className='form-grid-item' htmlFor="memberSinceInput">Member since</label>
+          <input className='form-grid-item' type="date" id="memberSinceInput" required disabled value={memberSince} />
+
+          <div className='form-grid-item'></div>
+          <div className='form-grid-item'>
+            <div className='form-button-container'>
+              <button className='form-button' type="submit">Save changes</button>
+            </div>
+          </div>
+        </div>
         <ChangePassword />
       </form>
     </main>

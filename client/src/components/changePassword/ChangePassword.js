@@ -1,6 +1,7 @@
 import { useContext, useState } from "react"
 import GlobalContext from "../../context/GlobalContext"
 import { validateChangePassword } from "../../controller/controller";
+import './changePassword.css';
 
 const ChangePassword = () => {
 
@@ -26,20 +27,29 @@ const ChangePassword = () => {
   }
 
   return (
-    <div className="container">
+    <div>
       <form>
-        <label htmlFor="oldPasswordInput">Old password</label>
-        <input type="password" id="oldPasswordInput" required placeholder="Old password" value={oldPassword} onChange={(e) => setOldPassword(e.target.value)} />
-        <label htmlFor="newPasswordInput">New password</label>
-        <input type="password" id="newPasswordInput" required min="4" placeholder="New password" value={newPassword} onChange={(e) => setNewPassword(e.target.value)} />
-        <label htmlFor="oldPasswordAgainInput">Retype new password</label>
-        <input type="password" id="oldPasswordAgainInput" required placeholder="Retype new password" value={newPasswordAgain} onChange={(e) => setNewPasswordAgain(e.target.value)} />
-        {errorMessage ? <>
-          <p className="error-message">{errorMessage}</p>
-        </> : <>
-          {message ? <p className="success-message">{message}</p> : null}
-        </>}
-        <button onClick={(e) => handleChangePassword(e)}>Save</button>
+        <div className="change-password-grid-container">
+          <label className="change-password-grid-item" htmlFor="oldPasswordInput">Old password</label>
+          <input className="change-password-grid-item" type="password" id="oldPasswordInput" required placeholder="Old password" value={oldPassword} onChange={(e) => setOldPassword(e.target.value)} />
+          <label className="change-password-grid-item" htmlFor="newPasswordInput">New password</label>
+          <input className="change-password-grid-item" type="password" id="newPasswordInput" required min="4" placeholder="New password" value={newPassword} onChange={(e) => setNewPassword(e.target.value)} />
+          <label className="change-password-grid-item" htmlFor="oldPasswordAgainInput">Retype new password</label>
+          <input className="change-password-grid-item" type="password" id="oldPasswordAgainInput" required placeholder="Retype new password" value={newPasswordAgain} onChange={(e) => setNewPasswordAgain(e.target.value)} />
+          {errorMessage ? <>
+            <p className="error-message">{errorMessage}</p>
+          </> : <>
+            {message ? <p className="success-message">{message}</p> : null}
+          </>}
+          <div className="change-password-grid-item"></div>
+          <div className="change-password-grid-item">
+            <div className='change-password-button-container'>
+              <button className='change-password-button' onClick={(e) => handleChangePassword(e)}>Change Password</button>
+            </div>
+          </div>
+        </div>
+        
+        
       </form>
     </div>
   )
