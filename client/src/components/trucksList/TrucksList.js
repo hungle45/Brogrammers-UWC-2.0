@@ -55,15 +55,15 @@ const TrucksList = () => {
           
           </div>
         </div>
-        <div className='table'>
-          <table id='truck-table'>
+        <div className='truck-list-table-container'>
+          <table id='truck-list-table'>
             <tbody>
               <tr>
-                <th className='table-header'>Truck ID</th>
-                <th className='table-header'>Used by</th>
-                <th className='table-header'>Location</th>
-                <th className='table-header'>Status
-                  <span onClick={() => HandleOnSort("status", 0)}>
+                <th className='truck-list-table-header' style={{width: "10%"}}>Truck ID</th>
+                <th className='truck-list-table-header' style={{width: "20%"}}>Used by</th>
+                <th className='truck-list-table-header' style={{width: "20%"}}>Location</th>
+                <th className='truck-list-table-header' style={{width: "10%"}}>Status
+                  <span className="truck-list-filter-button" onClick={() => HandleOnSort("status", 0)}>
                     {reverse[0] ? <CaretDownFill />
                       : <CaretUpFill />}
                   </span>
@@ -72,15 +72,16 @@ const TrucksList = () => {
               {trucks.map((value, index) => {
                 return (
                   <tr>
-                    <td className='table-item'>{value.id}</td>
-                    <td className='table-item'>{value.userName}</td>
-                    <td className='table-item'>{value.location}</td>
-                    <td className='table-item'>{!value.status ? <div className='status-available'>&bull; Available</div> : <div className='status-in-use'>&bull; In use</div>}</td>
+                    <td className='truck-list-table-item' style={{width: "10%"}}>{value.id}</td>
+                    <td className='truck-list-table-item' style={{width: "20%"}}>{value.userName}</td>
+                    <td className='truck-list-table-item' style={{width: "20%"}}>{value.location}</td>
+                    <td className='truck-list-table-item' style={{width: "10%"}}>{!value.status ? <div className='truck-list-status-available'>&bull; Available</div> : <div className='truck-list-status-in-use'>&bull; In use</div>}</td>
                   </tr>
                 )
               })}
             </tbody>
-          </table></div>
+          </table>
+        </div>
       </>
     </>
 
