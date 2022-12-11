@@ -22,7 +22,8 @@
     margin: 10px 50px;
 }
 .form-grid-item{
-    padding: 5px;
+    padding: 8px;
+    border-radius: 4px;
 }
 .form-button-container{
     display: flex;

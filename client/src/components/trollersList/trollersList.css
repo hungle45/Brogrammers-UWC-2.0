@@ -59,28 +59,29 @@
     color: #000000;
 }
 
-.table {
-    table-layout: auto;
+.troller-list-table-container {
     margin: 0px 40px;
 }
 
-.table tr:nth-child(even){background-color: #f2f2f2;}
-
-.table-header {
+.troller-list-table-container tr:nth-child(even){background-color: #f2f2f2;}
+.troller-list-table{
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0em 0px;
+}
+.troller-list-table-header {
     padding: 10px;
     text-align: center;
     font-weight: bold;
 }
-.troller-sort {
-    cursor: pointer;
-}
-.table-item {
+
+.troller-list-table-item {
     padding: 10px;
     text-align: center;
     font-weight: normal;
 }
 
-.status-available {
+.troller-list-status-available {
     display: inline-block;
     padding: 3px 10px;
     border-radius: 15px;
@@ -88,10 +89,21 @@
     color: #1FA750;
 }
 
-.status-in-use {
+.troller-list-status-in-use {
     display: inline-block;
     padding: 3px 10px;
     border-radius: 15px;
     background-color: #FDF5DD;
     color: #CFA00C;
+}
+.troller-list-filter-button{
+    position: relative;
+    bottom: 4px;
+    font-size: 5px;
+    background-color: #979797;
+    color: white;
+    margin-left: 10px;
+    cursor: pointer;
+    padding: 3.75px 5px;
+    border-radius: 50%;
 }
