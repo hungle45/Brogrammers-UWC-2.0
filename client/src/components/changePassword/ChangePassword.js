@@ -36,11 +36,17 @@ const ChangePassword = () => {
           <input className="change-password-grid-item" type="password" id="newPasswordInput" required min="4" placeholder="New password" value={newPassword} onChange={(e) => setNewPassword(e.target.value)} />
           <label className="change-password-grid-item" htmlFor="oldPasswordAgainInput">Retype new password</label>
           <input className="change-password-grid-item" type="password" id="oldPasswordAgainInput" required placeholder="Retype new password" value={newPasswordAgain} onChange={(e) => setNewPasswordAgain(e.target.value)} />
+
           {errorMessage ? <>
-            <p className="error-message">{errorMessage}</p>
+            <div className="change-password-grid-item"></div>
+            <p className="error-message change-password-grid-item">{errorMessage}</p>
           </> : <>
-            {message ? <p className="success-message">{message}</p> : null}
+            {message ? <> 
+            <div className="change-password-grid-item"></div>
+            <p className="success-message change-password-grid-item">{message}</p> 
+            </> : null}
           </>}
+          
           <div className="change-password-grid-item"></div>
           <div className="change-password-grid-item">
             <div className='change-password-button-container'>
