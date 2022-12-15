@@ -22,7 +22,7 @@ const Home = () => {
         </main>
       </div>
       <div className="background-1"
-    style = {{backgroundImage: `url(homeBackground.png)`}}>
+    style = {{backgroundImage: `url(https://img5.thuthuatphanmem.vn/uploads/2021/08/25/background-la-cay-4k_085534792.jpg)`}}>
     </div>
     </>
   )
